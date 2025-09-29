@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Writer's Forge - Building Writers, Not Just Scripts</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 40px 0 60px;
+            color: #fff;
+        }
+        
+        .quote {
+            font-size: 28px;
+            font-style: italic;
+            color: #ccc;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        .proof {
+            font-size: 48px;
+            font-weight: 900;
+            color: #ff6b35;
+            margin: 30px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .tagline {
+            font-size: 24px;
+            color: #fff;
+            margin: 20px 0;
+        }
+        
+        .subhead {
+            font-size: 18px;
+            color: #ccc;
+            margin-bottom: 40px;
+        }
+        
+        .main-content {
+            background: #fff;
+            padding: 60px 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+        }
+        
+        .section h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #ff6b35;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ff6b35;
+            padding-bottom: 10px;
+        }
+        
+        .section p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        
+        .bullet-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .bullet-list li {
+            margin: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .bullet-list li:before {
+            content: "•";
+            color: #ff6b35;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+        }
+        
+        .credentials {
+            background: linear-gradient(135deg, #ff6b35, #ff8c42);
+            color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .credentials h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .credentials p {
+            font-size: 16px;
+            opacity: 0.95;
+        }
+        
+        .email-signup {
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            color: #fff;
+            padding: 50px 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .email-signup h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #ff6b35;
+        }
+        
+        .email-signup p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #ccc;
+        }
+        
+        .email-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .email-form input[type="email"] {
+            width: 100%;
+            padding: 16px;
+            font-size: 16px;
+            border: 2px solid #ff6b35;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            background: #fff;
+            color: #333;
+        }
+        
+        .email-form input[type="email"]:focus {
+            outline: none;
+            border-color: #ff8c42;
+            box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.2);
+        }
+        
+        .cta-button {
+            width: 100%;
+            padding: 18px;
+            font-size: 18px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ff6b35, #ff8c42);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+        }
+        
+        .guarantee {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #ccc;
+        }
+        
+        .divider {
+            text-align: center;
+            margin: 40px 0;
+            color: #999;
+            font-size: 24px;
+        }
+        
+        .highlight {
+            background: #fff3e0;
+            padding: 20px;
+            border-left: 4px solid #ff6b35;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .main-content {
+                padding: 40px 20px;
+            }
+            
+            .quote {
+                font-size: 22px;
+            }
+            
+            .proof {
+                font-size: 36px;
+            }
+            
+            .tagline {
+                font-size: 20px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="quote">"You'll never make a dime as a screenwriter..."</div>
+            <div class="proof">$2.5 BILLION LATER</div>
+            <div class="tagline">That exec's long gone. But I'm still here.</div>
+            <div class="subhead">Ready to learn how to make your scripts undeniable?</div>
+        </div>
+        
+        <div class="main-content">
+            <div class="section-title">Welcome to The Writer's Forge</div>
+            
+            <div class="section">
+                <p>The Forge isn't a class. It's not a PDF. And it sure as hell isn't some self-anointed guru handing out formulas.</p>
+                
+                <p><strong>There are no shortcuts.</strong></p>
+                
+                <p>Think of The Forge as a dojo:</p>
+                <ul class="bullet-list">
+                    <li>A place to train</li>
+                    <li>To sweat</li>
+                    <li>To break lazy habits</li>
+                    <li>To get your ass kicked and come out sharper</li>
+                </ul>
+                
+                <p><strong>We don't just build scripts here. We build writers.</strong></p>
+            </div>
+            
+            <div class="divider">⸻</div>
+            
+            <div class="section">
+                <h2>Who I Am (and why I'm doing this)</h2>
+                
+                <div class="credentials">
+                    <h3>J. David Stem</h3>
+                    <p>20+ years as a professional screenwriter: Shrek 2, Rugrats, Jimmy Neutron, The Smurfs, Are We There Yet?, Disenchanted, Mission Hill</p>
+                </div>
+                
+                <p>It's been an incredible ride.</p>
+                
+                <p>But don't get it twisted — I wasn't a prodigy. I made every mistake you're making now:</p>
+                
+                <ul class="bullet-list">
+                    <li>Jumping into drafts too soon because the idea felt "so good it would write itself"</li>
+                    <li>Stalling out by page 30</li>
+                    <li>Rewriting the same dead script, clinging to broken pages I'd "worked so hard on"</li>
+                </ul>
+                
+                <p>We call that <strong>Polishing a Turd.</strong> Polite society calls it <strong>Putting Lipstick on a Pig.</strong></p>
+                
+                <div class="highlight">
+                    <p>I built The Forge because if I'd known then what I know now, it would've saved me years of struggle. Some of those great ideas might have become great scripts. Instead, they sat in my attic until they burned in the Pacific Palisades fire.</p>
+                    
+                    <p><strong>Out of the ashes, new things rise. That's what The Forge is about.</strong></p>
+                </div>
+            </div>
+            
+            <div class="divider">⸻</div>
+            
+            <div class="section">
+                <h2>Who I'm Looking For</h2>
+                
+                <p><strong>This isn't for dabblers.</strong></p>
+                
+                <p>It's for writers who:</p>
+                
+                <ul class="bullet-list">
+                    <li>Know the loneliness of the page… and keep going anyway</li>
+                    <li>Are willing to bleed on the page — to get past clever, past safe, into something primal and human</li>
+                    <li>Can take real notes, not empty cheerleading</li>
+                    <li>Show up, rewrite when it hurts, hit deadlines, and genuinely want each other to succeed</li>
+                </ul>
+                
+                <p>If you're looking for quick fixes or "Save the Cat" shortcuts, The Forge isn't for you.</p>
+                
+                <p><strong>But if you're ready to train like a pro, this is where you belong.</strong></p>
+            </div>
+        </div>
+        
+        <div class="email-signup">
+            <h2>Join The Forge</h2>
+            <p>Your first month is free. No credit card. No catch.</p>
+            <p>Enter your email and I'll send you immediate access to our private community where you'll start your first assignment today.</p>
+            
+            <!-- Replace this action URL with your actual Mailchimp form action -->
+            <form class="email-form" action="YOUR_MAILCHIMP_ACTION_URL" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
+                <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Enter your email address" required>
+                <button type="submit" class="cta-button" name="subscribe" id="mc-embedded-subscribe">Forge Ahead. Free.</button>
+            </form>
+            
+            <div class="guarantee">
+                Founding members lock in at a rate that's never coming back.<br>
+                Don't love it by the end of the month? May the wind be at your back.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
